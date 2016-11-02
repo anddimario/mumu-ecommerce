@@ -1,0 +1,30 @@
+{
+    "name": "mumuecommerce",
+    "version": "0.0.1",
+    "description": "Ecommerce microservice for mumu",
+    "engines": {
+        "arangodb": "^3.0.0"
+    },
+    "author": "Andrea Di Mario",
+    "license": "MIT",
+    "main": "main.js",
+    "scripts": {
+        "setup": "scripts/setup.js",
+        "teardown": "scripts/teardown.js"
+    },
+    "configuration": {
+      "jwtSecret": {
+        "description": "The token for sessions, must be the same of the main app",
+        "type": "string"
+      },
+      "mainAppPrefix": {
+        "description": "The main app prefix, used as prefix to access table, because you can't use context",
+        "type": "string"
+      },
+      "sites": {
+        "description": "Json for sites available",
+        "type": "json"
+      }
+    },
+    "tests": "test/**/*.js"
+}
